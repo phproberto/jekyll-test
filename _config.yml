@@ -1,5 +1,10 @@
-title: Tactile theme
-description: Tactile is a theme for GitHub Pages.
-show_downloads: true
-google_analytics:
-theme: jekyll-theme-tactile
+title: Tailwind Jekyll Starter Kit
+description: A starter kit for using Tailwind with Jekyll
+
+exclude:
+  - package.json
+  - node_modules
+  - gulpfile.js
+  - package-lock.json
+  - Gemfile
+  - Gemfile.lock
