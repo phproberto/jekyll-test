@@ -10,5 +10,10 @@
 </head>
 
 <body>
-  {% include navigation.html %}
-  <header>Header</header>
+	{% include navigation.html %}
+	<header>Header</header>
+	<ul>
+	{% for item in site.data.nav %}
+		<li>{{ item.title }}</li>
+	{% endfor %}
+	</ul>
