@@ -1,2 +1,4 @@
-- title: Getting Started
-  link: home
+- title: Docs
+  link: docs
+- title: Examples
+  link: docs/examples.md

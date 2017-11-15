@@ -1,0 +1,16 @@
+{% if site.data.sidebar %}
+<nav class="text-base overflow-y-scroll">
+	<ul style="list-style: none;">
+		{% for section in site.data.sidebar %}
+			<div class="mb-8">
+				<p class="mb-4 text-grey uppercase tracking-wide font-bold text-xs">{{ section.title}}</p>
+				{% for link in section.links %}
+					<li class="mb-3">
+						<a href="{{ link.url }}" class="hover:underline text-grey-darkest text-sm">{{ link.title }}</a>
+					</li>
+				{% endfor %}			
+			</div>
+		{% endfor %}
+	</ul>
+</nav>
+{% endif %}

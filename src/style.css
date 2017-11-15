@@ -43,3 +43,8 @@
  * @import "utilities/backgrond-patterns";
  * @import "utilities/skew-transforms";
  */
+@import "rouge-base16.dark";
+a {
+	color: inherit;
+	text-decoration: none;
+}

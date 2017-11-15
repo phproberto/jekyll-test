@@ -2,20 +2,15 @@
 <html class="no-js" lang="">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Tailwind Jekyll Starter Kit</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>{{ page.title | default: site.title | default: site.github.repository_name }}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 </head>
 
 <body>
-	{% include navigation.html %}
-	<header>Header</header>
-	{% if site.data.nav %}
-		<ul>
-		{% for item in site.data.nav %}
-			<li>{{ item.title }}</li>
-		{% endfor %}
-		</ul>
-	{% endif %}
+	{% include nav.html %}
