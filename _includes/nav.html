@@ -11,7 +11,7 @@
     {% if site.show_nav and site.data.nav %}
     <div class="text-sm lg:flex-grow">
       {% for item in site.data.nav %}
-        <a href="{{ item.link }}" class="block mt-4 lg:inline-block lg:mt-0 text-grey hover:text-white mr-4">{{ item.title }}</a>
+        <a href="{{ item.link | prepend: site.baseurl }}" class="block mt-4 lg:inline-block lg:mt-0 text-grey hover:text-white mr-4">{{ item.title }}</a>
       {% endfor %}
     </div>
     {% endif %}

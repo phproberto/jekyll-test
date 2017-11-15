@@ -6,7 +6,7 @@
 				<p class="mb-4 text-grey uppercase tracking-wide font-bold text-xs">{{ section.title}}</p>
 				{% for link in section.links %}
 					<li class="mb-3">
-						<a href="{{ link.url }}" class="hover:underline text-grey-darkest text-sm">{{ link.title }}</a>
+						<a href="{{ link.url | prepend: site.baseurl }}" class="hover:underline text-grey-darkest text-sm">{{ link.title }}</a>
 					</li>
 				{% endfor %}			
 			</div>
