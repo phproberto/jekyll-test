@@ -36,7 +36,7 @@ function compileSassFile(src, destinationFolder, options)
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(gulp.dest('_site/assets/' + destinationFolder))
+    .pipe(gulp.dest(siteRoot + '/assets/' + destinationFolder))
     .pipe(gulp.dest('assets/' + destinationFolder))
     .pipe(browserSync.reload({stream:true}))
     .pipe(cleancss())
@@ -66,7 +66,13 @@ gulp.task('serve', () => {
   });
 
   gulp.watch(['./src/**/*.scss'], ['css']);
-  gulp.watch(['**/*.html', '**/*.yml', '!_site/**/*'], ['jekyll-rebuild']);
+  gulp.watch([
+      '**/*.html', 
+      '**/*.yml', 
+      '!' + siteRoot + '/**/*'
+    ], 
+    ['jekyll-rebuild']
+  );
 });
 
 gulp.task('default', ['css', 'serve']);

@@ -13,11 +13,25 @@ code {
 
 pre {
   padding: 20px;
-  overflow: auto;
+  overflow: scroll;
   color: #f2f2f2;
   text-shadow: none;
   background: #303030;
   border-radius: 5px;
+  width: 290px;
+
+  @media (min-width: 360px) {
+    width: 325px;
+  }
+  @media (min-width: 380px) {
+    width: 350px;
+  }
+  @media (min-width: 410px) {
+    width: 370px;
+  }
+  @media (min-width: 900px) {
+    width: auto;
+  }
 }
 pre code {
   padding: 0;

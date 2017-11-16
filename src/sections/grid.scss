@@ -10,6 +10,10 @@ nav ul {
   margin-right: auto;
   max-width: calc(80.9em + 10vw);
   padding: 0 4.8vw;
+
+  @media (min-width: 600px) {
+  padding: 0 1.8vw;
+  }
 }
 
 .container {
@@ -23,24 +27,14 @@ nav ul {
   grid-column: col-start / span 12;
 }
 
-@media (min-width: 500px) {
-  .content, .main-footer {
-    grid-column: col-start 4 / span 9;
-  }
-  nav ul {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .main-nav {
     grid-column: col-start / span 3;
     grid-row: 1 / 4;
   }
-  .content {
+  #content {
     grid-column: col-start 4 / span 9;
-    grid-row: 2 / 4;
+    grid-row: 1 / 4;
   }
   nav ul {
     flex-direction: column;

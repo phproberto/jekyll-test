@@ -1,8 +1,11 @@
 #sidebar {
-	padding: 20px;
+	padding: 10px;
 	background-color: #fafcfc;
 	border: 2px solid #dae4e9;
 	height: 100%;
+	.section {
+		margin-bottom: 40px;
+	}
 	.section-title {
 		margin-bottom: 1rem;
 		text-transform: uppercase;
@@ -12,12 +15,16 @@
 	li {
 		margin-bottom: .75rem;
 	}
-}
+	a {
+		color: #444;
+	}
 
-@media (min-width: 700px) {
-	#sidebar {
-		border-top: 0;
-		border-bottom: 0;
-		padding-left : 40px;
+	@media (min-width: 800px) {
+			border-top: 0;
+			border-bottom: 0;
+	}
+
+	@media (min-width: 1000px) {
+			padding-left : 40px;
 	}
 }
