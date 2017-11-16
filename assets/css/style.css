@@ -532,6 +532,7 @@ nav ul {
     color: #fff;
     margin: 0; }
   #header .description {
+    margin-top: 5px;
     display: block;
     font-size: 50%;
     font-weight: normal;
