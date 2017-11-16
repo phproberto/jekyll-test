@@ -1,10 +1,38 @@
 ---
-layout: default
+layout: grid
 ---
 
 <p>Penis Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit modi odit deserunt officia facere quas ut, quaerat amet eos unde dolorem dicta inventore aspernatur est perspiciatis veniam! Voluptates, deleniti possimus.</p>
 <p>Ut dicta deleniti sint temporibus, laboriosam architecto aspernatur nostrum cumque, iure nihil error obcaecati, dolorum at illo quidem minima. Ex, inventore. Ab culpa soluta harum unde tenetur, facere nihil facilis.</p>
 <p>Maxime, distinctio possimus. Ipsa minus quaerat quis sapiente, molestias quod enim culpa totam vero laborum quia dolorum doloribus eum. Similique, saepe. Ad, est quaerat voluptate nostrum sed in pariatur. Ex!</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="sd">/**
+ * Render a module layout. This will search for layouts in:
+ * - templates/{ACTIVE_TEMPLATE}/html/mod_menu/default.html.twig
+ * - modules/mod_menu/tmpl/default.html.twig
+ */</span>
+<span class="k">echo</span> <span class="nx">Twig</span><span class="o">::</span><span class="na">render</span><span class="p">(</span><span class="s1">'@module/mod_menu/default.html.twig'</span><span class="p">);</span>
+
+<span class="sd">/**
+ * Render a library layout. This will search for layouts in:
+ * - templates/{ACTIVE_TEMPLATE}/html/libraries/phproberto/default.html.twig
+ * - libraries/phproberto/layouts/default.html.twig
+ */</span>
+<span class="k">echo</span> <span class="nx">Twig</span><span class="o">::</span><span class="na">render</span><span class="p">(</span><span class="s1">'@library/phproberto/default.html.twig'</span><span class="p">);</span>
+
+<span class="sd">/**
+ * Render a plugin layout. This will search for layouts in:
+ * - templates/{ACTIVE_TEMPLATE}/html/plugins/content/joomla/default.html.twig
+ * - plugins/content/joomla/tmpl/default.html.twig
+ */</span>
+<span class="k">echo</span> <span class="nx">Twig</span><span class="o">::</span><span class="na">render</span><span class="p">(</span><span class="s1">'@plugin/content/joomla/default.html.twig'</span><span class="p">);</span>
+
+<span class="sd">/**
+ * Render a template layout. This will search for layouts in:
+ * - templates/{ACTIVE_TEMPLATE}/html/default.html.twig
+ */</span>
+<span class="k">echo</span> <span class="nx">Twig</span><span class="o">::</span><span class="na">render</span><span class="p">(</span><span class="s1">'@template/default.html.twig'</span><span class="p">);</span>
+</code></pre></div></div>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Javascript code with syntax highlighting.</span>
 <span class="kd">var</span> <span class="nx">fun</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">lang</span><span class="p">(</span><span class="nx">l</span><span class="p">)</span> <span class="p">{</span>

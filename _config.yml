@@ -3,6 +3,10 @@ description: A starter kit for using Tailwind with Jekyll
 show_nav: true
 show_sidebar: true
 show_downloads: true
+github:
+  is_project_page: true
+  owner_name: phproberto
+  owner_url: https://github.com/phproberto
 
 exclude:
   - package.json
@@ -11,3 +15,4 @@ exclude:
   - package-lock.json
   - Gemfile
   - Gemfile.lock
+  - src 

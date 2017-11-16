@@ -1,22 +1,28 @@
 ---
 ---
-
-<div id="wrapper">
-	{% include header.html %}
-	<div class="min-h-screen relative">
-		{% if site.show_sidebar %}
-			<div id="sidebar" class="hidden z-50 absolute pin-y pin-b pin-l overflow-y-scroll md:overflow-visible scrolling-touch md:scrolling-auto bg-grey-lightest w-4/5 md:w-full md:max-w-xs flex-none border-r-2 border-smoke md:flex flex-col">
-				{% include sidebar.html %}
+<!doctype html>
+<html class="no-js" lang="">
+	{% include head.html %}
+	<body>
+		<div id="wrapper">
+			{% include nav.html %}
+			<div class="min-h-screen">
+				{% if site.show_sidebar %}
+					<div id="sidebar" class="hidden z-50 pin-y pin-b pin-l overflow-y-scroll md:overflow-visible scrolling-touch md:scrolling-auto bg-grey-lightest w-4/5 md:w-full md:max-w-xs flex-none border-r-2 border-smoke md:flex flex-col">
+						{% include sidebar.html %}
+					</div>
+					<div class="md:ml-80">
+						<div id="content" class="px-6 pb-8 pt-8 w-full max-w-lg mx-auto">
+							{{ content }}							
+						</div>
+					</div>
+				{% else %}
+					{{ content }}
+				{% endif %}	
 			</div>
-			<div class="md:ml-80">
-				<div id="content" class="px-6 pb-8 pt-20 md:pt-16 w-full max-w-lg mx-auto">
-					{{ content }}							
-				</div>
-			</div>
-		{% else %}
-			{{ content }}
-		{% endif %}	
-	</div>
 
-	{% include footer.html %}
-</div>
+			{% include footer.html %}
+		</div>
+		{% include analytics.html %}
+	</body>
+</html>

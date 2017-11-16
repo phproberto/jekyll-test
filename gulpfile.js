@@ -1,9 +1,13 @@
-const gulp = require('gulp');
-const gutil = require('gulp-util');
-const child = require('child_process');
+const gulp        = require('gulp');
+const gutil       = require('gulp-util');
+const autoprefixer = require('gulp-autoprefixer');
+const cleancss = require('gulp-clean-css');
+const child       = require('child_process');
 const browserSync = require('browser-sync').create();
+const sass        = require('gulp-sass');
+
 const siteRoot = '_site';
-const cssFiles = 'src/style.css';
+const cssFiles = 'src/style.scss';
 const tailwindConfig = 'tailwind-config.js';
 
 var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
@@ -24,29 +28,29 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
     browserSync.reload();
 });
 
-/**
- * Compile styles
- */
-gulp.task('css', function () {
-  const atimport = require('postcss-import');
-  const postcss = require('gulp-postcss');
-  const tailwindcss = require('tailwindcss');
-  const autoprefixer = require('gulp-autoprefixer');
-  const cleancss = require('gulp-clean-css');
-
-  return gulp.src(cssFiles)
-    .pipe(postcss([
-      atimport(),
-      tailwindcss(tailwindConfig)
-    ]))
+function compileSassFile(src, destinationFolder, options)
+{
+  return gulp.src(src)
+    .pipe(sass())
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(cleancss())
-    .pipe(gulp.dest('_site/assets/css/'))
+    .pipe(gulp.dest('_site/assets/' + destinationFolder))
+    .pipe(gulp.dest('assets/' + destinationFolder))
     .pipe(browserSync.reload({stream:true}))
-    .pipe(gulp.dest('assets/css/'));
+    .pipe(cleancss())
+    .pipe(browserSync.reload({stream:true}));
+}
+
+/**
+ * Compile styles
+ */
+gulp.task('css', function () {
+  return compileSassFile(
+    'src/style.scss',
+    'css'
+  );
 });
 
 /**
@@ -61,7 +65,7 @@ gulp.task('serve', () => {
     }
   });
 
-  gulp.watch([cssFiles, tailwindConfig], ['css']);
+  gulp.watch(['./src/**/*.scss'], ['css']);
   gulp.watch(['**/*.html', '**/*.yml', '!_site/**/*'], ['jekyll-rebuild']);
 });
 
