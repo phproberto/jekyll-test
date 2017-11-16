@@ -3,8 +3,13 @@
 	background-color: $header-bg;
 	color: $header-color;
 	h1 {
+		text-align: center;
 		color: $header-title-color;
 		margin: 0;
+	    @media (min-width: 800px) {
+	    	text-align: left;
+	      float: left;
+	    }
 	}
 	.description {
 	margin-top: 5px;

@@ -1,6 +1,9 @@
  #nav {
- 	.buttons {
- 		float: right;
- 		line-height: 3;
- 	}
- }
+  .buttons {
+    text-align: center;
+    line-height: 3;
+    @media (min-width: 800px) {
+    text-align: right;
+    }
+  }
+}
