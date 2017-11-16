@@ -4,25 +4,29 @@
 <html class="no-js" lang="">
 	{% include head.html %}
 	<body>
-		<div id="wrapper">
-			{% include nav.html %}
-			<div class="min-h-screen">
-				{% if site.show_sidebar %}
-					<div id="sidebar" class="hidden z-50 pin-y pin-b pin-l overflow-y-scroll md:overflow-visible scrolling-touch md:scrolling-auto bg-grey-lightest w-4/5 md:w-full md:max-w-xs flex-none border-r-2 border-smoke md:flex flex-col">
-						{% include sidebar.html %}
-					</div>
-					<div class="md:ml-80">
-						<div id="content" class="px-6 pb-8 pt-8 w-full max-w-lg mx-auto">
-							{{ content }}							
-						</div>
-					</div>
-				{% else %}
-					{{ content }}
-				{% endif %}	
+		<div id="header">
+			<div class="wrapper">
+				{% include nav.html %}
 			</div>
-
-			{% include footer.html %}
 		</div>
-		{% include analytics.html %}
+		<div id="main">
+			<div class="wrapper">
+				<div class="container">
+					<article class="content">
+						{{ content }}
+					</article> 					
+					<nav id="sidebar" class="main-nav">
+						{% include sidebar.html %}
+					</nav>
+				</div>
+			</div>			
+		</div>
+		<div id="footer">
+			<div class="wrapper">
+				<div>
+				{% include footer.html %}					
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
