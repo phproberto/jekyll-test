@@ -434,7 +434,7 @@ pre {
   @media (min-width: 410px) {
     pre {
       width: 370px; } }
-  @media (min-width: 900px) {
+  @media (min-width: 420px) {
     pre {
       width: auto; } }
 
