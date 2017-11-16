@@ -1,0 +1,24 @@
+$white: #ffffff !default;
+
+// Header
+$header-bg: #596a73 !default;
+$header-color: #9babb4 !default;
+$header-title-color: $white !default;
+
+// Sidebar
+$sidebar-bg: #596a73 !default;
+$sidebar-color: #9babb4 !default;
+
+// Buttons
+$button-bg: #ededed !default;
+$button-border: #cccccc !default;
+$button-color: #444444 !default;
+$button-hover-bg: $button-color !default;
+$button-hover-border: #999999 !default;
+$button-hover-color: #ededed !default;
+$button-header-bg: transparent !default;
+$button-header-border: #cccccc !default;
+$button-header-color: #ededed !default;
+$button-header-hover-bg: $white !default;
+$button-header-hover-border: $white !default;
+$button-header-hover-color: $header-bg !default;

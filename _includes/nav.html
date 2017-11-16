@@ -1,5 +1,10 @@
 <nav id="nav">
-  <h1>{{ site.title }} <span class="description">{{ page.description | default: site.description | default: site.github.project_tagline }}</descripion></h1>
+    {% if site.show_downloads %}
+    <div class="buttons">
+        <a class="btn header" href="{{ site.download_url | default: site.github.zip_url }}" >Download</a>      
+    </div>
+    {% endif %}
+  <h1><a href="{{ site.baseurl }}">{{ site.title }}</a> <span class="description">{{ page.description | default: site.description | default: site.github.project_tagline }}</descripion></h1>
   <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
     {% if site.show_nav and site.data.nav %}
     <div class="text-sm lg:flex-grow">
@@ -9,9 +14,4 @@
     </div>
     {% endif %}
   </div>
-    {% if site.show_downloads %}
-    <div style="float: right;">
-        <a href="#" >Download</a>      
-    </div>
-    {% endif %}
 </nav>

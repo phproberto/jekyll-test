@@ -1,9 +1,9 @@
 #header {
 	padding: 20px 0;
-	background-color: #596a73;
-	color: #9babb4;
+	background-color: $header-bg;
+	color: $header-color;
 	h1 {
-		color: #fff;
+		color: $header-title-color;
 		margin: 0;
 	}
 	.description {
@@ -11,6 +11,6 @@
 		display: block; 
 		font-size: 50%;
 		font-weight: normal;
-		color: #9babb4;
+		color: $header-color;
 	}
 }

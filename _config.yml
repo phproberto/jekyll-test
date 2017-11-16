@@ -3,6 +3,7 @@ description: Twig 2.0 & Twig extensions integration for Joomla!
 show_nav: false
 show_sidebar: true
 show_downloads: true
+download_url: https://github.com/phproberto/joomla-twig/releases/download/v1.0.0-beta2/joomla-twig-v1.0.0-beta2.zip
 github:
   is_project_page: true
   owner_name: phproberto

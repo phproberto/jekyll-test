@@ -1,0 +1,25 @@
+.btn,
+a.btn {
+	background-color: $button-bg;
+	color: $button-color;
+	padding: 7px;
+	border: 1px solid $button-border;
+	border-radius: 3px;
+	font-size: 0.9em;
+	&:hover {
+		background-color: $button-hover-bg;
+		color: $button-hover-color;
+		border: 1px solid $button-hover-border;
+	}
+	text-decoration: none;
+}
+
+.btn.header {
+	background-color: $button-header-bg;
+	color: $button-header-color;
+	&:hover {
+		background-color: $button-header-hover-bg;
+		color: $button-header-hover-color;
+		border: 1px solid $button-header-hover-border;
+	}
+}

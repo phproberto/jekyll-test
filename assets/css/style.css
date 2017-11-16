@@ -406,6 +406,35 @@ template {
 [hidden] {
   display: none; }
 
+a {
+  color: inherit;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+.btn,
+a.btn {
+  background-color: #ededed;
+  color: #444444;
+  padding: 7px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  font-size: 0.9em;
+  text-decoration: none; }
+  .btn:hover,
+  a.btn:hover {
+    background-color: #444444;
+    color: #ededed;
+    border: 1px solid #999999; }
+
+.btn.header {
+  background-color: transparent;
+  color: #ededed; }
+  .btn.header:hover {
+    background-color: #ffffff;
+    color: #596a73;
+    border: 1px solid #ffffff; }
+
 code, pre {
   margin-bottom: 30px;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
@@ -484,6 +513,10 @@ nav ul {
     -ms-flex-direction: column;
     flex-direction: column; } }
 
+#nav .buttons {
+  float: right;
+  line-height: 3; }
+
 #sidebar {
   padding: 10px;
   background-color: #fafcfc;
@@ -529,7 +562,7 @@ nav ul {
   background-color: #596a73;
   color: #9babb4; }
   #header h1 {
-    color: #fff;
+    color: #ffffff;
     margin: 0; }
   #header .description {
     margin-top: 5px;
@@ -545,12 +578,6 @@ html, body {
 body {
   margin: 0;
   background-color: #fff; }
-
-a {
-  color: inherit;
-  text-decoration: none; }
-  a:hover {
-    text-decoration: underline; }
 
 #main,
 #main .wrapper,
