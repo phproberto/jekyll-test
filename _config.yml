@@ -1,6 +1,6 @@
 title: joomla-twig
 description: A starter kit for using Tailwind with Jekyll
-show_nav: true
+show_nav: false
 show_sidebar: true
 show_downloads: true
 github:

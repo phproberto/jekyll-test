@@ -1,6 +1,5 @@
 <nav id="nav">
-  <h1>{{ site.title }}</h1>
-
+  <h1>{{ site.title }} <span class="description">{{ page.description | default: site.description | default: site.github.project_tagline }}</descripion></h1>
   <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
     {% if site.show_nav and site.data.nav %}
     <div class="text-sm lg:flex-grow">

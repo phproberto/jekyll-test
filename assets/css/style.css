@@ -529,7 +529,13 @@ nav ul {
   background-color: #596a73;
   color: #9babb4; }
   #header h1 {
-    color: #fff; }
+    color: #fff;
+    margin: 0; }
+  #header .description {
+    display: block;
+    font-size: 50%;
+    font-weight: normal;
+    color: #9babb4; }
 
 html, body {
   height: 100%;
