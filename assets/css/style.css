@@ -494,8 +494,7 @@ nav ul {
 .container {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
-  grid-gap: 20px;
-  height: 100%; }
+  grid-gap: 20px; }
 
 .container > * {
   grid-column: col-start / span 12; }
@@ -581,8 +580,7 @@ body {
   background-color: #fff; }
 
 #main,
-#main .wrapper,
-#main .container {
+#main .wrapper {
   min-height: 100%; }
 
 /*
