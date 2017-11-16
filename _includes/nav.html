@@ -1,15 +1,20 @@
 <nav id="nav">
     {% if site.show_downloads %}
     <div class="buttons">
-        <a class="btn header" href="{{ site.download_url | default: site.github.zip_url }}" >Download</a>      
+      <a class="btn header" href="{{ site.download_url | default: site.github.zip_url }}" >Download</a>      
+      {% if site.github.is_project_page %}
+        <a href="{{ site.github.repository_url }}" class="btn header"><span>View on GitHub</span></a>
+      {% else %}
+        <a href="{{ site.github.owner_url }}" class="btn header"><span>View on GitHub</span></a>
+      {% endif %}
     </div>
     {% endif %}
   <h1><a href="{{ site.baseurl }}">{{ site.title }}</a> <span class="description">{{ page.description | default: site.description | default: site.github.project_tagline }}</descripion></h1>
-  <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+  <div>
     {% if site.show_nav and site.data.nav %}
     <div class="text-sm lg:flex-grow">
       {% for item in site.data.nav %}
-        <a href="{{ item.link | prepend: site.baseurl }}" class="block mt-4 lg:inline-block lg:mt-0 text-grey hover:text-white mr-4">{{ item.title }}</a>
+        <a href="{{ item.link | prepend: site.baseurl }}" class="">{{ item.title }}</a>
       {% endfor %}
     </div>
     {% endif %}
