@@ -506,7 +506,8 @@ nav ul {
     grid-row: 1 / 4; }
   #content {
     grid-column: col-start 4 / span 9;
-    grid-row: 1 / 4; }
+    grid-row: 1 / 4;
+    padding-bottom: 10vh; }
   nav ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
