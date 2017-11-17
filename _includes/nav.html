@@ -1,8 +1,7 @@
 <nav id="nav">
   <h1><a href="{{ site.baseurl }}">{{ site.title }}</a> <span class="description">{{ site.description | default: site.github.project_tagline }}</descripion></h1>
-  {% if site.show_downloads %}
   <div class="buttons">
-    {% if site.github.latest_release %}
+    {% if site.show_downloads and site.github.latest_release %}
       <a class="btn header" href="{{ site.github.latest_release.html_url }}" >Download {{ site.github.latest_release.tag_name }}</a>      
     {% endif %}
     {% if site.github.is_project_page %}
@@ -11,7 +10,6 @@
       <a href="{{ site.github.owner_url }}" class="btn header"><span>View on GitHub</span></a>
     {% endif %}
   </div>
-  {% endif %}
   <div>
     {% if site.show_nav and site.data.nav %}
     <div class="text-sm lg:flex-grow">
