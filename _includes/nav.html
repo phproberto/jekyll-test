@@ -2,7 +2,9 @@
   <h1><a href="{{ site.baseurl }}">{{ site.title }}</a> <span class="description">{{ site.description | default: site.github.project_tagline }}</descripion></h1>
   {% if site.show_downloads %}
   <div class="buttons">
-    <a class="btn header" href="{{ site.download_url | default: site.github.zip_url }}" >Download</a>      
+    {% if site.github.latest_release %}
+      <a class="btn header" href="{{ site.github.latest_release.html_url }}" >Download {{ site.github.latest_release.tag_name }}</a>      
+    {% endif %}
     {% if site.github.is_project_page %}
       <a href="{{ site.github.repository_url }}" class="btn header"><span>View on GitHub</span></a>
     {% else %}
