@@ -412,17 +412,17 @@ a {
   a:hover {
     text-decoration: underline; }
 
-.btn,
 a.btn {
+  text-decoration: none; }
+
+.btn {
   background-color: #ededed;
   color: #444444;
   padding: 7px;
   border: 1px solid #cccccc;
   border-radius: 3px;
-  font-size: 0.9em;
-  text-decoration: none; }
-  .btn:hover,
-  a.btn:hover {
+  font-size: 0.9em; }
+  .btn:hover {
     background-color: #444444;
     color: #ededed;
     border: 1px solid #999999; }
@@ -430,10 +430,11 @@ a.btn {
 .btn.header {
   background-color: transparent;
   color: #ededed; }
-  .btn.header:hover {
-    background-color: #ffffff;
-    color: #596a73;
-    border: 1px solid #ffffff; }
+
+.btn.header:hover {
+  background-color: #ffffff;
+  color: #596a73;
+  border: 1px solid #ffffff; }
 
 code, pre {
   margin-bottom: 30px;

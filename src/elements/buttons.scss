@@ -1,5 +1,7 @@
-.btn,
 a.btn {
+	text-decoration: none;	
+}
+.btn {
 	background-color: $button-bg;
 	color: $button-color;
 	padding: 7px;
@@ -11,15 +13,14 @@ a.btn {
 		color: $button-hover-color;
 		border: 1px solid $button-hover-border;
 	}
-	text-decoration: none;
 }
 
 .btn.header {
 	background-color: $button-header-bg;
 	color: $button-header-color;
-	&:hover {
-		background-color: $button-header-hover-bg;
-		color: $button-header-hover-color;
-		border: 1px solid $button-header-hover-border;
-	}
+}
+.btn.header:hover {
+	background-color: $button-header-hover-bg;
+	color: $button-header-hover-color;
+	border: 1px solid $button-header-hover-border;
 }
