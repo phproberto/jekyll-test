@@ -549,8 +549,11 @@ nav ul {
     #sidebar {
       padding-left: 40px; } }
 
-#content a {
-  color: #0275d8; }
+#content {
+  line-height: 1.5;
+  font-size: 1.1em; }
+  #content a {
+    color: #0275d8; }
 
 #footer {
   margin-top: 20px;
