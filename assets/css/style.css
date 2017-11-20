@@ -436,6 +436,10 @@ a.btn {
   color: #596a73;
   border: 1px solid #ffffff; }
 
+img.responsive {
+  max-width: 100%;
+  height: auto; }
+
 code, pre {
   margin-bottom: 30px;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
