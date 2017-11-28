@@ -597,7 +597,7 @@ body {
 
 #main,
 #main .wrapper,
-#main .wrapper > container {
+#main .wrapper > .container {
   height: 100%; }
 
 /*
